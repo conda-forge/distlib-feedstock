@@ -1,5 +1,5 @@
 {% set name = "distlib" %}
-{% set version = "0.3.3" %}
+{% set version = "0.3.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.zip
-  sha256: d982d0751ff6eaaab5e2ec8e691d949ee80eddf01a62eaa96ddb11531fe16b05
+  sha256: e4b58818180336dc9c529bfb9a0b58728ffc09ad92027a3f30b7cd91e3458579
 
 build:
   number: 0
@@ -24,7 +24,6 @@ requirements:
 test:
   imports:
     - distlib
-    - distlib._backport
   commands:
     - pip check
   requires:
