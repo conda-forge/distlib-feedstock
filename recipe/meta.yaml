@@ -24,7 +24,6 @@ requirements:
 test:
   imports:
     - distlib
-    - distlib._backport
   commands:
     - pip check
   requires:
