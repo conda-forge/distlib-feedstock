@@ -9,6 +9,8 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/distlib-feedsto
 
 Summary: Distribution utilities
 
+Development: https://github.com/pypa/distlib
+
 Documentation: https://pythonhosted.org/distlib/
 
 Current build status
