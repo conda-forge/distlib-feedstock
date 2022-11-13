@@ -18,8 +18,8 @@ requirements:
   host:
     - pip
     - python 2.7|>=3.6
-    - setuptools >= 44
-    - wheel >= 0.29
+    - setuptools >=44
+    - wheel >=0.29
   run:
     - python 2.7|>=3.6
 
