@@ -1,5 +1,5 @@
 {% set name = "distlib" %}
-{% set version = "0.3.7" %}
+{% set version = "0.3.8" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 9dafe54b34a028eafd95039d5e5d4851a13734540f1331060d31c9916e7147a8
+  sha256: 1530ea13e350031b6312d8580ddb6b27a104275a31106523b8f123787f494f64
 
 build:
   number: 0
