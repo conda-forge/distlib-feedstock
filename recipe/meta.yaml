@@ -1,5 +1,5 @@
 {% set name = "distlib" %}
-{% set version = "0.4.0" %}
+{% set version = "0.4.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: feec40075be03a04501a973d81f633735b4b69f98b05450592310c0f401a4e0d
+  sha256: c3804d0d2d4b5fcd44036eb860cb6660485fcdf5c2aba53dc324d805837ea65b
 
 build:
   number: 0
@@ -18,8 +18,8 @@ requirements:
   host:
     - pip
     - python {{ python_min }}
-    - setuptools >=44
-    - wheel >=0.29
+    - setuptools >=68,<75
+    - wheel
   run:
     - python >={{ python_min }}
 
