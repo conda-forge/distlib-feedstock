@@ -1,0 +1,47 @@
+schema_version: 1
+
+context:
+  name: distlib
+  version: "0.4.1"
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
+  sha256: c3804d0d2d4b5fcd44036eb860cb6660485fcdf5c2aba53dc324d805837ea65b
+
+build:
+  number: 1
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv
+
+requirements:
+  host:
+    - pip
+    - python ${{ python_min }}.*
+    - setuptools >=68,<75
+    - wheel
+  run:
+    - python >=${{ python_min }}
+
+tests:
+  - python:
+      imports:
+        - distlib
+      pip_check: true
+      python_version: ${{ python_min }}
+
+about:
+  summary: Distribution utilities
+  license: Apache-2.0
+  license_file: LICENSE.txt
+  homepage: https://pypi.org/project/distlib/
+  repository: https://github.com/pypa/distlib
+  documentation: https://pythonhosted.org/distlib/
+
+extra:
+  recipe-maintainers:
+    - nicoddemus
+    - xylar
