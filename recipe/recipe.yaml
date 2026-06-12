@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: distlib
-  version: "0.4.2"
+  version: "0.4.3"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
-  sha256: baeb401c90f27acd15c4861ae0847d1e731c27ac3dbf4210643ba61fa1e813db
+  sha256: f152097224a0ae24be5a0f6bae1b9359af82133bce63f98a95f86cae1aede9ed
 
 build:
   number: 0
